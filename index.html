@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Love ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:Poppins;
+background:#ffe6f0;
+text-align:center;
+color:#333;
+overflow-x:hidden;
+}
+
+header{
+padding:80px 20px;
+background:linear-gradient(135deg,#ff6fa5,#ff9cc3);
+color:white;
+}
+
+h1{
+font-family:Pacifico;
+font-size:48px;
+margin-bottom:10px;
+}
+
+section{
+padding:50px 20px;
+max-width:1000px;
+margin:auto;
+}
+
+button{
+padding:12px 25px;
+border:none;
+background:#ff4d88;
+color:white;
+border-radius:25px;
+cursor:pointer;
+font-size:16px;
+margin-top:15px;
+}
+
+button:hover{
+background:#ff1a66;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+margin-top:30px;
+}
+
+.gallery img,
+.gallery video{
+width:100%;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+.gallery img:hover,
+.gallery video:hover{
+transform:scale(1.05);
+transition:0.3s;
+}
+
+footer{
+background:#ff6fa5;
+color:white;
+padding:25px;
+margin-top:40px;
+}
+
+#reason{
+font-size:20px;
+margin-top:20px;
+color:#ff1a66;
+}
+
+iframe{
+margin-top:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+border-radius:12px;
+width:100%;
+}
+
+.hearts{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+}
+
+.heart{
+position:absolute;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+
+100%{
+transform:translateY(-10vh);
+opacity:0;
+}
+
+}
+
+/* MOBILE IMPROVEMENTS */
+
+@media(max-width:600px){
+
+h1{
+font-size:34px;
+}
+
+section{
+padding:40px 15px;
+}
+
+#reason{
+font-size:18px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="hearts"></div>
+
+<header>
+
+<h1>For My Beautiful Girl ❤️</h1>
+
+<p>This little place on the internet is just for you.</p>
+
+</header>
+
+
+<section>
+
+<h2>Our Song 🎶</h2>
+
+<p>This song reminds me of you ❤️</p>
+
+<iframe src="https://open.spotify.com/embed/track/2MCMoWWhsuslO8NBRAfHR0"
+height="152"
+frameBorder="0"
+allowfullscreen=""
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+
+</section>
+
+
+<section>
+
+<h2>Our Story</h2>
+
+<p>
+
+The day I met you something felt different.
+You brought happiness, peace and warmth into my life.
+
+Every moment with you has become a memory I treasure,
+and every day I’m grateful to have you in my world.
+
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Reasons I Love You ❤️</h2>
+
+<button onclick="showReason()">Click for a reason</button>
+
+<p id="reason"></p>
+
+</section>
+
+
+<section>
+
+<h2>Moments With You ❤️</h2>
+
+<p>Every moment with you is my favorite memory ❤️</p>
+
+<div class="gallery">
+
+<img src="IMG_2432.JPG">
+<img src="IMG_2433.JPG">
+<img src="IMG_2479.JPG">
+<img src="IMG_2522 copy.JPG">
+<img src="IMG_2825.JPG">
+<img src="IMG_2829 .JPG">
+
+<video controls>
+<source src="IMG_2435 .mp4" type="video/mp4">
+</video>
+
+<video controls>
+<source src="IMG_2442 2.mp4" type="video/mp4">
+</video>
+
+<video controls>
+<source src="IMG_2455.mp4" type="video/mp4">
+</video>
+
+<video controls>
+<source src="b6899fa6-adad-4b2e-adc9-989183526fe0 copy.MP4" type="video/mp4">
+</video>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>A Letter For You 💌</h2>
+
+<p>
+
+I know we missed Valentine's Day,
+but love isn't about one date.
+
+It's about every moment I think of you,
+every smile you bring to my face,
+and every future moment I dream about with you.
+
+You mean more to me than words can explain.
+
+I love you ❤️
+
+</p>
+
+</section>
+
+
+<section>
+
+<button onclick="surprise()">Click For A Surprise 💖</button>
+
+<p id="surpriseText"></p>
+
+</section>
+
+
+<footer>
+
+Made with love by your boyfriend ❤️
+
+</footer>
+
+
+<script>
+
+const reasons = [
+
+"Your smile lights up my day.",
+"You believe in me.",
+"You make my life peaceful.",
+"You make ordinary moments special.",
+"Your laugh is my favorite sound.",
+"You inspire me to be better.",
+"You make my world brighter.",
+"Being with you feels like home."
+
+]
+
+function showReason(){
+
+const random = reasons[Math.floor(Math.random()*reasons.length)]
+
+document.getElementById("reason").innerText = random
+
+}
+
+function surprise(){
+
+document.getElementById("surpriseText").innerText =
+"I love you more than words can ever explain ❤️"
+
+}
+
+function createHeart(){
+
+const heart = document.createElement("div")
+
+heart.className="heart"
+
+heart.innerHTML="❤️"
+
+heart.style.left=Math.random()*100+"vw"
+
+heart.style.fontSize=Math.random()*20+10+"px"
+
+heart.style.animationDuration=Math.random()*3+3+"s"
+
+document.querySelector(".hearts").appendChild(heart)
+
+setTimeout(()=>{heart.remove()},6000)
+
+}
+
+setInterval(createHeart,300)
+
+</script>
+
+</body>
+</html>
